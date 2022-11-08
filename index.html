@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="sorting.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Creepster&family=Gemunu+Libre:wght@500;800&family=Happy+Monkey&family=Poppins:ital@1&family=Press+Start+2P&family=Sora:wght@700&family=Ubuntu:wght@300&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <title>Sorting Visualizer App</title>
+</head>
+
+<body>
+    <h1 id="head1"><span id="h11">Sorting </span><span id="h12">Algorithms </span><span id="h13">Visualizer</span></h1>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <button type="button" id="new-array" class="btn btn-ouline-primary" onclick="window.location.reload()">
+                New Array
+            </button>
+            <span id="speed-bar">
+                <h4>Speed </h4>
+                <input id="sort-speed"
+                type="range"
+                min="-500"
+                max="-0.8"
+                step="1"
+                value="-200"
+                />
+            </span>
+            <span id="number-bar">
+                <h4>Number of Elements </h4>
+                <input id="arr_sz"
+                type="range"
+                min="20"
+                max="120"
+                step="1"
+                value="60"
+                />
+            </span>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <button type="button" onclick="BubbleSort()" class="btns">
+                        Bubble Sort
+                    </button>
+                    <button type="button" onclick="insertionSort()" class="btns">
+                        Insertion Sort
+                    </button>
+                    <button type="button" onclick="SelectionSort()" class="btns">
+                        Selection Sort
+                    </button>
+                    <button type="button" onClick="quickSort()" class="btns">
+                        Quick Sort
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="bars">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="js_files\sorting.js"></script>
+    <script src="js_files\insertion.js"></script>
+    <script src="js_files\quicksort.js"></script>
+    <script src="js_files\selection.js"></script>
+    <script src="js_files\bubble.js"></script>
+</body>
+
+</html>
